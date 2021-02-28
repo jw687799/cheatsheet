@@ -8,6 +8,18 @@ k delete secret <name>
 k apply -f ./secret_file_nm.yaml 
 k get secret <name> -o go-template-file=template.txt
 
+#secret.yaml looks like below
+apiVersion: v1
+kind: secret
+metadata:
+  name: first-try
+type: Opaque
+stringData:
+  channel: 'DEV.APP.SVRCONN'
+  host: '127.0.0.1'
+  port: '1414'
+  pass: 'pwd'
+
 #ibmmq
 k create secret generic <secrete_nm> \
   --from-literal=host=localhost \
