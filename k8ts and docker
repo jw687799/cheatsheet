@@ -1,0 +1,19 @@
+alias kubectl='k'
+k get secrets
+k get pods
+k get service
+
+k get secret <name> -o yaml
+k delete secret <name>
+k apply -f ./secret_file_nm.yaml 
+k get secret <name> -o go-template-file=template.txt
+
+#ibmmq
+k create secret generic <secrete_nm> \
+  --from-literal=host=localhost \
+  --from-literal=port=<port>  \  #default 1414
+  --from-literal=user=<user>  \
+  --from-literal=pass='<pwd>' \
+  --from-literal=queueManager=QM1  \
+  --from-literal=channel=DEV.APP.SVRCONN \
+  
