@@ -1,0 +1,36 @@
+0) pom.xml
+		<!-- Application Insights - scope set to 'test' so the library does not get included -->
+		<!--   in the uber jar created by spring-boot-maven-plugin, excludeArtifactIds did not work -->
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>applicationinsights-agent</artifactId>
+			<version>3.2.4</version>
+			<scope>test</scope>
+		</dependency>
+    
+    <!-- app insights custom telemetry -->
+		<dependency>
+  			<groupId>com.microsoft.azure</groupId>
+  			<artifactId>applicationinsights-spring-boot-starter</artifactId>
+  			<version>2.6.4</version>
+		</dependency>
+
+1) dockerfile:
+# Application Insights (AI)
+COPY target/lib-appinsights/applicationinsights-agent.jar /opt/ai-agent/applicationinsights-agent.jar
+COPY src/main/resources/insights/applicationinsights.json  /opt/ai-agent/applicationinsights.json
+
+
+2)	Run in local with eclipse,  ( you don’t want these are there unless you work on the app insight feature)
+-	need to import the certificate into your keystore. Here is the file ai_certificate.cer. 
+-	Make sure APPLICATIONINSIGHTS_CONFIGURATION_FILE (which is absolute path of app insights configuration file) environment variable is defined.
+-	Make sure -javaagent:lib/applicationinsights-agent-3.X.X.jar in VM argument section
+
+
+3)	Run in local with Docker desktop: ( you don’t want these are there unless you work on the app insight feature)
+•	Make sure you env file have these two defined.
+RUN_APP_INSIGHTS=true
+AI_INSTRUMENTATION_KEY=<APP_INSIGHTS_CONNECTION_STRING>
+•	Make sure you have these two lines in docker-compose.yaml
+      #- AI_INSTRUMENTATION_KEY=${AI_INSTRUMENTATION_KEY}
+      #- RUN_APP_INSIGHTS=${RUN_APP_INSIGHTS}
