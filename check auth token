@@ -1,0 +1,3 @@
+
+- manually check basic authorization
+curl https://aaf-azure.it.it.com/authz/roles/user/{mechid@namespace.it.com} -H "Authorization: Basic {Base64(mechid@namespace.it.com:mechid-password)}" -v
