@@ -1,0 +1,7 @@
+-- install az powershell module
+https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.1.0
+
+1. "$PSVersionTable.PSVersion"
+2."Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+3. "Get-ExecutionPolicy -List"
+4. "Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force"
