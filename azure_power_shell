@@ -5,3 +5,5 @@ https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.1.0
 2."Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
 3. "Get-ExecutionPolicy -List"
 4. "Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force"
+
+New-AzResourceGroupDeployment -ResourceGroupName "<your resource group>" -TemplateFile "<path to JobTemplate.json>" -TemplateParameterFile "<path to JobTemplate.parameters.json>"
