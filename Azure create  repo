@@ -1,0 +1,8 @@
+https://learn.microsoft.com/en-us/azure/devops/repos/git/creatingrepo?view=azure-devops&tabs=command-line
+
+> git init 
+> git remote add origin <clone URL> 
+> git add .
+> git status   
+> git commit -m "initial commit"  
+> git push -u origin main
