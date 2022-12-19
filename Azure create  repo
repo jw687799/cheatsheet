@@ -1,8 +1,20 @@
 https://learn.microsoft.com/en-us/azure/devops/repos/git/creatingrepo?view=azure-devops&tabs=command-line
 
+--pre requirement before the push
+set proxy
+export HTTPS_PROXY=http://proxy.com:8080
+export HTTP_PROXY=http://proxy.com:8080
+
+git config  http.sslVerify false
+git config --global user.name 'xxx,yyy'
+git config --global user.email 'xxx@yyy.com'
+
+
 > git init 
 > git remote add origin <clone URL> 
 > git add .
 > git status   
 > git commit -m "initial commit"  
 > git push -u origin main
+
+
