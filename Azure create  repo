@@ -18,3 +18,5 @@ git config --global user.email 'xxx@yyy.com'
 > git push -u origin main
 
 
+# create pipeline
+https://learn.microsoft.com/en-us/azure/stream-analytics/set-up-cicd-pipeline
