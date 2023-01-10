@@ -1,0 +1,41 @@
+https://www.youtube.com/watch?v=NBjYY8P08lI&list=PLgbtO1Bcz4C-vU0JLfDBsZGbSUdNX4mQ8&index=1
+
+intro 
+- install node 
+  powershell: node -v
+- npm init //create package.json
+  package name: unittest
+- npm i --save-dev mocha //install mocha
+- npm i --save-dev chai  //install chai  ==> assert, expect, should interface
+- create folder /src, /specs or /test 
+- create file myclass.js under src
+- create spec class myclasss.spec.js under /specs folder
+- package.json
+  "scripts":
+- npm run test
+
+spy:
+- npm i --save-dev sinon 
+- function
+  callAnotherFn(arg1, arg2){
+   var result = this.add(arg1, arg2);
+   return result
+  }
+- unit test 
+  var sinon = require("sinon")
+  var myObj = new MyClass();
+  it("spy the add()", function(){
+    spy=sinon.spy(myObj, "add");
+    var arg1=10, arg2=2;
+    myObj.callAnotherFn(arg1, arg2)
+    sinon.assert.calledOnce(spy);
+  });
+  
+  
+ mock:
+ 
+ 
+setup &first test,  xhr
+spy hooks
+mock coverage
+stub misc
