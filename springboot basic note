@@ -19,5 +19,5 @@ baseUrl:"${ENV_VAR1: http://localhost:8080}"
 7) @ConfigurationProperties (prefix="??"),  the binding class must have the empty constructor
  defined in application.yaml
  you can also refer it as @Value annotation
- @value ("${spring.log.level}")
+ @Value ("${spring.log.level}") //bad practice, hard for unit testing
  private String logLevel; //member variable
