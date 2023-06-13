@@ -11,4 +11,6 @@
 spring.profile.active: dev/prod
 logger: logback.xml
 application context: server.servlet.context-path
+application-dev.yaml
+application-prod.yaml
 
