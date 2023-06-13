@@ -2,5 +2,9 @@
 2) ObjectProvider<T>
 3) Scope,  by default is singleton, global
    "prototype" scope will create as individual instance as needed. please use ObjectProvicer<T> in constructor.
-3) @RestController = @Controller + @ResponseBody,  in class level with mapping
-4) 
+4) @RestController = @Controller + @ResponseBody,  in class level with mapping
+@RequestMapping
+@GetMapping
+@PutMapping
+@PostMapping
+5) 
