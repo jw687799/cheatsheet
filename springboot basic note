@@ -7,4 +7,8 @@
 @GetMapping
 @PutMapping
 @PostMapping
-5) aa
+5) configuration:
+spring.profile.active: dev/prod
+logger: logback.xml
+application context: server.servlet.context-path
+
