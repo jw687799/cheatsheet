@@ -13,4 +13,6 @@ logger: logback.xml
 application context: server.servlet.context-path
 application-dev.yaml
 application-prod.yaml
+6) application.yaml
+baseUrl:"${ENV_VAR1: http://localhost:8080}"
 
