@@ -16,3 +16,5 @@ application-prod.yaml
 6) application.yaml
 baseUrl:"${ENV_VAR1: http://localhost:8080}"
 
+7) @ConfigurationProperties,  the binding class must have the empty constructor
+
