@@ -1,0 +1,10 @@
+
+Azure (VSC) cmds:
+Show all cmds: Ctrl+shift+P
+Open File: ctrl + O
+Open Folder: ctrl +K ctrl+O
+Open Recent: ctrl +R
+Toggle Terminal: ctrl +`
+
+
+SQL to Kusto query translation - Azure Data Explorer | Microsoft Learn
