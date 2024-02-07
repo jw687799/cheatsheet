@@ -1,0 +1,12 @@
+
+	1) Create virtual env: 
+	c:\>python -m venv c:\path\to\myenv
+	
+	After this, you can see this folder is created.  c:\path\to\myenv\.venv
+	
+	From <https://docs.python.org/3/library/venv.html> 
+	
+	2) Check pip version, 
+	py -m pip --version
+	
+From <https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-and-using-virtual-environments> 
