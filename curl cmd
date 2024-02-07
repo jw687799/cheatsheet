@@ -1,0 +1,32 @@
+Cmd shell:
+
+-O: This option downloads the file and saves it with the same name as in the URL. 
+
+-C -: This option resumes download which has been stopped due to some reason. This is useful when downloading large files and was interrupted
+
+-u: curl also provides options to download files from user authenticated FTP servers
+	url -u demo:password -O ftp://test.rebex.net/readme.txt
+-x, –proxy: curl also lets us use a proxy to access the URL.
+
+	curl -u [user]:[password] -x [proxy_name]:[port] [URL...]
+
+curl -X DELETE -G 'http://localhost:5000/locations' -d 'id=3'
+
+curl -X DELETE -G \
+'http://localhost:5000/locations' \
+-d id=3 \
+-d name=Mario \
+-d surname=Bros
+
+
+
+curl -X POST https://login.microsoftonline.com/<subscriber_id>/oauth2/v2.0/token -H "content-type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=<id>&client_secret=<secret>&scope=<scope>/.default&extension_logicalCluster=lkc-<lkcname>&extension_identityPoolId=<pGID>"
+
+curl -X POST https://login.microsoftonline.com/<subscriber_id>/oauth2/v2.0/token -H "content-type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=<id>&client_secret=<secret>&scope=<scope>/.default"
+
+curl -X POST https://login.microsoftonline.com/<subscriber_id>/oauth2/v2.0/token -H "content-type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=<id>&client_secret=<secret>&scope=https://<name>-eastus2-eh-ns2.servicebus.windows.net/.default"
+
+
+
+JW4617@ILCDTL03JW4617 MINGW64 ~
+$ curl -x sub.proxy.xxx.com:8080 https://api.confluent.cloud/ksqldbcm/v2/clusters?environment=env-j5n9nw --user <api-key>:<api-secret> -k
