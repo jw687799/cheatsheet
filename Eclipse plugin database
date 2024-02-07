@@ -1,0 +1,9 @@
+Eclipse with  database plugin
+	1. Download | pgJDBC (postgresql.org) download the jdbc jar
+	2. Eclipse-> install new software: Latest Eclipse IDE Packages Release - https://download.eclipse.org/technology/epp/packages/latest/
+	3. Search data tools platform enablement extend sdk, 
+	4.                                                  SQL development, postgres  SQL, JDBC
+	5. The database development prospective should show up in the eclipse
+	6. Add jdbc jar to eclipse: Managing databases with Eclipse and the Database Tools - Tutorial (vogella.com)
+Open the databbase development prospective, create new db connection
+
