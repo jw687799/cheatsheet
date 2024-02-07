@@ -1,0 +1,17 @@
+docker_cheatsheet.pdf
+
+docker images
+docker ps
+docker logs -f api-server
+
+
+Local:
+MINGW64 /c/Program Files/Docker/Docker/resources
+$ ./dockerd &
+[1] 1965
+
+$> docker pull confluentinc/ksqldb-cli:0.17.0
+
+Ksql CLI set up using docker (Run only in command prompt, not in git bash or Windows PowerShell)
+ 
+docker run -e KSQL_BOOTSTRAP_SERVERS=<confluent_host>:9093 -e KSQL_SECURITY_PROTOCOL=SASL_SSL -e KSQL_SASL_MECHANISM=PLAIN -e KSQL_SASL_JAAS_CONFIG="org.apache.kafka.common.security.plain.PlainLoginModule required username=\"<user>\" password=\"<pwd>\";" confluentinc/ksqldb-cli:0.17.0
